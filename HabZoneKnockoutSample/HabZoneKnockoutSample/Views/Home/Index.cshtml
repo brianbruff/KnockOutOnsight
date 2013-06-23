@@ -1,0 +1,98 @@
+﻿<div class="thz-sheet">
+	<header class="thz-header"></header>
+
+	<div class="thz-content">
+
+		<div class="thz-column right">
+			<div class="thz-panel right">
+				<h1><img src="~/images/stats.png">Vehicle Stats</h1>
+				<img src="~/Images/ratings_default.jpg" title="This table shows how your car compares with others - use the slider below the chart to examine how a more (or less) efficient car affects your bottom line">
+				<div id="slider_stats" class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><a class="ui-slider-handle ui-state-default ui-corner-all" href="http://www.onsight.ie/clients/habzone/car/#" style="left: 42.857142857142854%;"></a><label style="left: 0%;">A1</label><label style="left: 7.142857142857142%;">A2</label><label style="left: 14.285714285714285%;">A3</label><label style="left: 21.428571428571427%;">B1</label><label style="left: 28.57142857142857%;">B2</label><label style="left: 35.714285714285715%;">B3</label><label style="left: 42.857142857142854%;">C1</label><label style="left: 50%;">C2</label><label style="left: 57.14285714285714%;">C3</label><label style="left: 64.28571428571429%;">D1</label><label style="left: 71.42857142857143%;">D2</label><label style="left: 78.57142857142857%;">E1</label><label style="left: 85.71428571428571%;">E2</label><label style="left: 92.85714285714286%;">F</label><label style="left: 100%;">G</label></div>
+			</div>
+			<div class="thz-panel right">
+				<h1><img src="~/Images/fuel.png">Fuel Prices</h1>
+				<img src="~/Images/fuel_prices_default.jpg" title="This chart shows how your fuel prices have changed - and will change - over the years - use the sliders below the chart to determine the cost of your car over multiple years">
+				<div id="slider_years" class="slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><div class="ui-slider-range ui-widget-header ui-corner-all" style="left: 50%; width: 12.5%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="http://www.onsight.ie/clients/habzone/car/#" style="left: 50%;"></a><a class="ui-slider-handle ui-state-default ui-corner-all" href="http://www.onsight.ie/clients/habzone/car/#" style="left: 62.5%;"></a><label style="left: 0%;">2009</label><label style="left: 12.5%;">2010</label><label style="left: 25%;">2011</label><label style="left: 37.5%;">2012</label><label style="left: 50%;">2013</label><label style="left: 62.5%;">2014</label><label style="left: 75%;">2015</label><label style="left: 87.5%;">2016</label><label style="left: 100%;">2017</label></div>
+			</div>
+		</div>
+
+		<div class="thz-column">
+			<div class="thz-panel">
+				<h1><img src="~/Images/car_header.png">Find Your Car</h1>
+				<form style="clear:both;margin:20px">
+				Select your car to begin<br><br>
+					<label>Make</label><select title="Select the manufacturer of your car" data-bind="options: carMakes, optionsText: 'name', optionsValue: 'id'"></select><br>
+                    
+					<label>Model</label><select title="Select the model of your car"></select><br>
+					<label>Engine</label><select title="Select the engine of your car"></select><br>
+					<label>Fuel</label><select id="fuelType" title="Select the fuel type used by your car"><option>Petrol</option><option>Diesel</option><option>Electric</option></select><br>
+					<label>Mfg Year</label><select id="yearManufactured" title="Select the year in which your car was manufactured"><option>1980</option><option>1981</option><option>1982</option><option>1983</option><option>1984</option><option>1985</option><option>1986</option><option>1987</option><option>1988</option><option>1989</option><option>1990</option><option>1991</option><option>1992</option><option>1993</option><option>1994</option><option>1995</option><option>1996</option><option>1997</option><option>1998</option><option>1999</option><option>2000</option><option>2001</option><option>2002</option><option>2003</option><option>2004</option><option>2005</option><option>2006</option><option>2007</option><option>2008</option><option>2009</option><option>2010</option><option>2011</option><option>2012</option><option selected="selected">2013</option></select><br>
+					<label>Yearly km</label><select id="annualMileage" title="Select the average number of kilometres your do per year in your car"><option>1000</option><option>2000</option><option>3000</option><option>4000</option><option>5000</option><option>6000</option><option>7000</option><option>8000</option><option>9000</option><option>10000</option><option>11000</option><option>12000</option><option>13000</option><option>14000</option><option>15000</option><option>16000</option><option>17000</option><option>18000</option><option>19000</option><option selected="selected">20000</option><option>21000</option><option>22000</option><option>23000</option><option>24000</option><option>25000</option><option>26000</option><option>27000</option><option>28000</option><option>29000</option><option>30000</option><option>31000</option><option>32000</option><option>33000</option><option>34000</option><option>35000</option><option>36000</option><option>37000</option><option>38000</option><option>39000</option><option>40000</option><option>41000</option><option>42000</option><option>43000</option><option>44000</option><option>45000</option><option>46000</option><option>47000</option><option>48000</option><option>49000</option><option>50000</option><option>51000</option><option>52000</option><option>53000</option><option>54000</option><option>55000</option><option>56000</option><option>57000</option><option>58000</option><option>59000</option><option>60000</option><option>61000</option><option>62000</option><option>63000</option><option>64000</option><option>65000</option><option>66000</option><option>67000</option><option>68000</option><option>69000</option><option>70000</option><option>71000</option><option>72000</option><option>73000</option><option>74000</option><option>75000</option><option>76000</option><option>77000</option><option>78000</option><option>79000</option><option>80000</option><option>81000</option><option>82000</option><option>83000</option><option>84000</option><option>85000</option><option>86000</option><option>87000</option><option>88000</option><option>89000</option><option>90000</option><option>91000</option><option>92000</option><option>93000</option><option>94000</option><option>95000</option><option>96000</option><option>97000</option><option>98000</option><option>99000</option><option>100000</option><option>101000</option><option>102000</option><option>103000</option><option>104000</option><option>105000</option><option>106000</option><option>107000</option><option>108000</option><option>109000</option><option>110000</option><option>111000</option><option>112000</option><option>113000</option><option>114000</option><option>115000</option><option>116000</option><option>117000</option><option>118000</option><option>119000</option><option>120000</option></select><br>
+					<div class="clearfix"></div>
+					<fieldset>
+						<input type="submit" value="Submit" title="Perform the cost &amp; CO2 calculations based on the selected car to see how much your car costs">
+						<input type="reset" value="Reset" title="Reset the current calculations">
+						<input type="button" value="Load" title="Load the details of a previously-selected car">
+					</fieldset>
+				</form>
+			</div>		
+		</div>
+
+		<div class="thz-column">
+			<div class="thz-panel">
+				<h1><img src="~/Images/euro.png">The Bottom Line</h1>
+				<table id="figuresTable" cellspacing="1" title="This table shows the cost and CO2 emissions related to the running of your car">
+				<thead>
+				<tr><td></td><td>Annually</td><td>Sum</td></tr>
+				</thead>
+				<tbody>
+				<tr><td style="text-align:right">Car Tax</td><td>0</td><td>0</td></tr>
+				<tr><td style="text-align:right">Fuel Cost</td><td>0</td><td>0</td></tr>
+				<tr><td style="text-align:right">CO<sub>2</sub></td><td>0</td><td>0</td></tr>
+				</tbody>
+				</table>
+			</div>
+			
+			<div id="alternativesPanel" class="thz-panel">
+				<h1><img src="~/Images/alternatives.png">Alternatives</h1>
+				<table id="alternativesTable" cellspacing="1" title="This table shows a list of alternatives to your chosen car - click to load the details and make a comparison">
+				<thead>
+				<tr><td>Rating</td><td>Make</td><td>Model</td><td>Engine</td><td>Fuel</td><td>Marketplace</td></tr>
+				</thead>
+				<tbody>
+				<tr><td>A1</td><td>Manufacturer Name</td><td>Model Name</td><td>Engine</td><td>Fuel</td><td>Get Quote</td></tr>
+				<tr><td>A1</td><td>Manufacturer Name</td><td>Model Name</td><td>Engine</td><td>Fuel</td><td>Get Quote</td></tr>
+				<tr><td>A1</td><td>Manufacturer Name</td><td>Model Name</td><td>Engine</td><td>Fuel</td><td>Get Quote</td></tr>
+				<tr><td>A1</td><td>Manufacturer Name</td><td>Model Name</td><td>Engine</td><td>Fuel</td><td>Get Quote</td></tr>
+				<tr><td>A1</td><td>Manufacturer Name</td><td>Model Name</td><td>Engine</td><td>Fuel</td><td>Get Quote</td></tr>				
+				</tbody>
+				</table>
+				<input id="viewAlternatives" type="button" value="View More »" class="smaller">
+			</div>
+		</div>
+		
+		<div class="thz-column doublewidth">
+			<div class="thz-panel">
+				<h1><img src="~/Images/movie.png">Watch It!<input id="viewAnimation" type="button" value="View Animation »" style="float:right;margin-top:-2px"></h1>
+				<div id="animationPanel">
+					<div id="timeline" style="width:1200%" title="Watch how your car clocks up the cost and CO2 emissions over the year">
+						<div id="mycar"></div>
+						<div id="progresstable"><div class="month" style="background-image: url(http://www.onsight.ie/clients/habzone/car/images/cal.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/forest.png); background-position: 100% 0%, 206px 68px, 385px 68px, 758px 68px;"><span></span></div><div class="month" style="background-image: url(http://www.onsight.ie/clients/habzone/car/images/cal.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/forest.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png); background-position: 100% 0%, 140px 68px, 364px 68px, 581px 68px;"><span></span></div><div class="month" style="background-image: url(http://www.onsight.ie/clients/habzone/car/images/cal.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/forest.png); background-position: 100% 0%, 122px 68px, 355px 68px, 663px 68px;"><span></span></div><div class="month" style="background-image: url(http://www.onsight.ie/clients/habzone/car/images/cal.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/forest.png); background-position: 100% 0%, 111px 68px, 379px 68px, 571px 68px;"><span></span></div><div class="month" style="background-image: url(http://www.onsight.ie/clients/habzone/car/images/cal.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/forest.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png); background-position: 100% 0%, 283px 68px, 320px 68px, 637px 68px;"><span></span></div><div class="month" style="background-image: url(http://www.onsight.ie/clients/habzone/car/images/cal.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/forest.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png); background-position: 100% 0%, 108px 68px, 527px 68px, 743px 68px;"><span></span></div><div class="month" style="background-image: url(http://www.onsight.ie/clients/habzone/car/images/cal.png), url(http://www.onsight.ie/clients/habzone/car/images/forest.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png); background-position: 100% 0%, 77px 68px, 333px 68px, 693px 68px;"><span></span></div><div class="month" style="background-image: url(http://www.onsight.ie/clients/habzone/car/images/cal.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/forest.png); background-position: 100% 0%, 276px 68px, 302px 68px, 564px 68px;"><span></span></div><div class="month" style="background-image: url(http://www.onsight.ie/clients/habzone/car/images/cal.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/forest.png); background-position: 100% 0%, 226px 68px, 456px 68px, 734px 68px;"><span></span></div><div class="month" style="background-image: url(http://www.onsight.ie/clients/habzone/car/images/cal.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/forest.png); background-position: 100% 0%, 112px 68px, 520px 68px, 667px 68px;"><span></span></div><div class="month" style="background-image: url(http://www.onsight.ie/clients/habzone/car/images/cal.png), url(http://www.onsight.ie/clients/habzone/car/images/forest.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png); background-position: 100% 0%, 115px 68px, 398px 68px, 778px 68px;"><span></span></div><div class="month" style="background-image: url(http://www.onsight.ie/clients/habzone/car/images/cal.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png), url(http://www.onsight.ie/clients/habzone/car/images/forest.png), url(http://www.onsight.ie/clients/habzone/car/images/fartree.png); background-position: 100% 0%, 211px 68px, 353px 68px, 774px 68px;"><span></span></div></div>
+					</div>
+					<div id="foregroundtrees"><div class="tree" style="margin-left: 500px;"></div><div class="tree" style="margin-left: 5569px;"></div><div class="tree" style="margin-left: 9248px;"></div><div class="tree" style="margin-left: 28746px;"></div><div class="tree" style="margin-left: 23258px;"></div><div class="tree" style="margin-left: 22963px;"></div><div class="tree" style="margin-left: 8008px;"></div><div class="tree" style="margin-left: 69366px;"></div><div class="tree" style="margin-left: 6880px;"></div><div class="tree" style="margin-left: 87921px;"></div><div class="tree" style="margin-left: 66443px;"></div><div class="tree" style="margin-left: 32492px;"></div><div class="tree" style="margin-left: 126648px;"></div><div class="tree" style="margin-left: 28070px;"></div><div class="tree" style="margin-left: 149192px;"></div><div class="tree" style="margin-left: 128322px;"></div><div class="tree" style="margin-left: 116791px;"></div><div class="tree" style="margin-left: 44716px;"></div><div class="tree" style="margin-left: 131616px;"></div><div class="tree" style="margin-left: 204438px;"></div><div class="tree" style="margin-left: 124302px;"></div><div class="tree" style="margin-left: 63586px;"></div><div class="tree" style="margin-left: 209076px;"></div><div class="tree" style="margin-left: 21543px;"></div><div class="tree" style="margin-left: 272782px;"></div><div class="tree" style="margin-left: 255102px;"></div><div class="tree" style="margin-left: 73039px;"></div><div class="tree" style="margin-left: 227236px;"></div><div class="tree" style="margin-left: 167295px;"></div><div class="tree" style="margin-left: 151393px;"></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="alternativesPopup">
+
+</div>
+
+
+
+@section scripts{
+    @Scripts.Render("~/bundles/knockout")
+    @Scripts.Render("~/bundles/app")
+    
+}
