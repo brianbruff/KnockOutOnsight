@@ -8,13 +8,21 @@ namespace HabZoneKnockoutSample.Models
 
         static SampleData()
         {
-            //var toyotaEngines = new List<ModelEngine> { new ModelEngine { Id = 1, Capacity = 1998, Name = "2ltr" } };
-            //var vwEngines = new List<ModelEngine> { new ModelEngine { Id = 10, Capacity = 1597, Name = "1.6ltr" } };
+            var toyotaEngines = new List<ModelEngine> { new ModelEngine { Id = 1, Capacity = 1998, Name = "2ltr" } };
+            var vwEngines = new List<ModelEngine> { new ModelEngine { Id = 10, Capacity = 1597, Name = "1.6ltr" } };
 
             _makes = new List<CarMake>
                            {
-                               new CarMake { Id = 1, Name = "Toyota", CarModels = new List<CarModelInfo> { new CarModelInfo { Id = 1, Name = "Corolla", } }  },
-                               new CarMake { Id = 10, Name = "Volkswagon", CarModels = new List<CarModelInfo> { new CarModelInfo { Id = 10, Name = "Golf"} } }
+                               new CarMake { Id = 1, Name = "Toyota", 
+                                   CarModels = new List<CarModel> { 
+                                       new CarModel { Id = 1, Name = "Corolla", ModelEngines = toyotaEngines },
+                                       new CarModel { Id = 2, Name = "Carina", ModelEngines = toyotaEngines }}  
+                               },
+                               new CarMake { Id = 10, Name = "Volkswagon", CarModels = new List<CarModel>
+                                                                                           {
+                                                                                               new CarModel { Id = 10, Name = "Golf", ModelEngines = vwEngines },
+                                                                                               new CarModel { Id = 11, Name = "Passat", ModelEngines = vwEngines }
+                                                                                           } }
                            };
         }
 
@@ -31,7 +39,7 @@ namespace HabZoneKnockoutSample.Models
 
     public class CarMake : CarModelInfo
     {
-        public List<CarModelInfo> CarModels { get; set; }
+        public List<CarModel> CarModels { get; set; }
     }
 
     public class CarModelInfo

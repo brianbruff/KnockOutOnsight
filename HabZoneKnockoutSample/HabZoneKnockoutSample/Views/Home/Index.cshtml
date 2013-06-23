@@ -21,9 +21,10 @@
 				<h1><img src="~/Images/car_header.png">Find Your Car</h1>
 				<form style="clear:both;margin:20px">
 				Select your car to begin<br><br>
-					<label>Make</label><select title="Select the manufacturer of your car" data-bind="options: carMakes, optionsText: 'name', optionsValue: 'id'"></select><br>
-                    
-					<label>Model</label><select title="Select the model of your car"></select><br>
+				    <label>Make</label><select title="Select the manufacturer of your car" data-bind="options: carMakes, optionsText: 'name', optionsValue: 'id', value: selectedMakeId"></select><br>
+                    <!-- ko with: selectedMake -->
+                    <label>Model</label><select title="Select the model of your car" data-bind="options: carModels, optionsText: 'name', optionsValue: 'id', value: $parent.selectedModelId"></select><br>
+                    <!-- /ko -->
 					<label>Engine</label><select title="Select the engine of your car"></select><br>
 					<label>Fuel</label><select id="fuelType" title="Select the fuel type used by your car"><option>Petrol</option><option>Diesel</option><option>Electric</option></select><br>
 					<label>Mfg Year</label><select id="yearManufactured" title="Select the year in which your car was manufactured"><option>1980</option><option>1981</option><option>1982</option><option>1983</option><option>1984</option><option>1985</option><option>1986</option><option>1987</option><option>1988</option><option>1989</option><option>1990</option><option>1991</option><option>1992</option><option>1993</option><option>1994</option><option>1995</option><option>1996</option><option>1997</option><option>1998</option><option>1999</option><option>2000</option><option>2001</option><option>2002</option><option>2003</option><option>2004</option><option>2005</option><option>2006</option><option>2007</option><option>2008</option><option>2009</option><option>2010</option><option>2011</option><option>2012</option><option selected="selected">2013</option></select><br>

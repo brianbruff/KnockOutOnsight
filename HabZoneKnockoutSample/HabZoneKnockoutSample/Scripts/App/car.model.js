@@ -14,11 +14,12 @@
         // Persisted properties
         self.id= data.id;
         self.name = data.name;
-        self.carModels = data.models;        
+        self.carModels = ko.observableArray(data.carModels);
+        self.modelEngines = ko.observableArray(data.modelEngines);
         
         self.totalModels = ko.computed(function () {
             if (self.models)
-                return self.models.length;
+                return self.carModels.length;
             return 0;
         });
     };

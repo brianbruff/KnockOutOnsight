@@ -4,7 +4,7 @@ window.carApp.datacontext = (function () {
 
     var datacontext = {
         getMakes: getMakes,
-        getModels: getModels,
+        getMake: getMake,
     };
 
     return datacontext;
@@ -22,24 +22,24 @@ window.carApp.datacontext = (function () {
         }
 
         function getFailed() {
-            errorObservable("Error retrieving .");
+            errorObservable("Error retrieving car makes.");
         }
     }
     
     
-    function getModels(make, modelsObservable, errorObservable) {
-        return ajaxRequest("get", modelsUrl() + make.id)
+    function getMake(makeId, selectedMakeObservable, errorObservable) {
+        return ajaxRequest("get", makesUrl(makeId))
             .done(getSucceeded)
             .fail(getFailed);
 
         function getSucceeded(data) {
-            //var reportDetail = createExpenseReport(data);
-            //expenseReportObservable(reportDetail);
+            var make = createMake(data);
+            selectedMakeObservable(make);
             
         }
 
         function getFailed() {
-            errorObservable("Error retrieving expense report.");
+            errorObservable("Error retrieving make detail.");
         }
     }
     
